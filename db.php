@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "id19569901_sebastian";
-$password = "SRMorales123.";
-$dbname = "id19569901_1";
+$username = "root";
+$password = "";
+$dbname = "petconnect";
 
 // Usando la misma variable que en login.php
 $mysqli = new mysqli($servername, $username, $password, $dbname);

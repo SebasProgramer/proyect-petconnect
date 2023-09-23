@@ -62,6 +62,11 @@ body.my-login-page {
 	border-color: blueviolet;
 }
 
+#btn-color-register{
+	background-color: blueviolet;
+	border-color: blueviolet;
+}
+
 #forget-password-index{
 	color: blueviolet;
 }
@@ -70,11 +75,43 @@ body.my-login-page {
 	color: blueviolet;
 }
 
-#passeye-toggle-0 {
-	background-color: blueviolet !important;
-	border: blueviolet !important;
-	
+/* Estilo para el modal */
+.modal-body {
+    font-size: 14px;
 }
+
+/* Estilo para los títulos dentro del modal */
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para el texto del contenido del modal */
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+/* Estilo para las listas dentro del modal */
+.modal-body ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo para los enlaces dentro del modal */
+.modal-body a {
+    color: #007bff; /* Color azul por defecto de los enlaces */
+    text-decoration: underline;
+}
+
+/* Estilo para el botón "Cerrar" del modal */
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: 1px solid #999;
+}
+
+
+
 
 
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>My Login Page &mdash; Bootstrap 4 Login Page Snippet</title>
+	<title>PetConnect &mdash; Bootstrap 4 Login Page Snippet</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="my-login.css">
 </head>
@@ -19,7 +19,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Registro</h4>
-							<form method="POST" action="register.php" class="my-login-validation" novalidate="">
+							<form method="POST" action="register.php" class="my-register-validation" novalidate="">
 								<div class="form-group">
 									<label for="name">Nombre</label>
 									<input id="name" type="text" class="form-control" name="name" required autofocus>
@@ -47,16 +47,73 @@
 								<div class="form-group">
 									<div class="custom-checkbox custom-control">
 										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
-										<label for="agree" class="custom-control-label">Yo estoy de acuerdo con los <a href="#">Términos y Condiciones</a></label>
+										<label for="agree" class="custom-control-label" style="background-color: white;">Yo estoy de acuerdo con los <a href="#" data-toggle="modal" data-target="#termsModal">Términos y Condiciones</a></label> <br>
+
 										<div class="invalid-feedback">
 											Debes estar de acuerdo con nuestros terminos y condiciones
 										</div>
 									</div>
 								</div>
 
+								<!-- Aquí comienza el modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Fecha de la última actualización:</strong> [Fecha]</p>
+
+                <p>Bienvenido/a a la página web de adopciones de animales (en adelante, "el Sitio"). El uso de este Sitio está sujeto a los siguientes términos y condiciones. Al acceder y utilizar el Sitio, usted acepta cumplir y estar sujeto a estos términos y condiciones. Si no está de acuerdo con alguno de estos términos, le pedimos que no utilice el Sitio.</p>
+
+                <h6>1. Uso del Sitio</h6>
+                <p>1.1. El Sitio es administrado y mantenido por [Nombre de la entidad estudiantil] con fines exclusivamente educativos y sin fines de lucro.</p>
+                <p>1.2. Los usuarios tienen permitido acceder al Sitio, explorar su contenido y utilizar sus funciones de acuerdo con estos términos y condiciones.</p>
+                <p>1.3. Los refugios de animales pueden registrarse en el Sitio para subir y administrar perfiles de animales disponibles para adopción.</p>
+
+                <h6>2. Registro de Refugios</h6>
+                <p>2.1. Los refugios interesados en registrarse en el Sitio deben proporcionar información precisa y veraz durante el proceso de registro.</p>
+                <p>2.2. El Sitio se reserva el derecho de revisar y aprobar los registros de refugios antes de que puedan subir perfiles de animales.</p>
+
+                <h6>3. Contenido de los Perfiles de Animales</h6>
+                <p>3.1. Los refugios son los únicos responsables de la precisión y actualización de la información proporcionada en los perfiles de los animales.</p>
+                <p>3.2. Se prohíbe la publicación de contenido ofensivo, engañoso o ilegal en los perfiles de los animales.</p>
+
+                <h6>4. Uso Apropiado del Sitio</h6>
+                <p>4.1. Los usuarios deben utilizar el Sitio de manera ética y respetuosa con el propósito educativo de la página.</p>
+                <p>4.2. Queda estrictamente prohibido cualquier intento de dañar, sobrecargar o acceder de manera no autorizada a los servidores del Sitio.</p>
+
+                <h6>5. Propiedad Intelectual</h6>
+                <p>5.1. Todo el contenido y los recursos presentados en el Sitio, incluidos textos, imágenes, logotipos y diseño, están protegidos por derechos de autor y son propiedad exclusiva de [Nombre de la entidad estudiantil] o se utilizan con permiso de terceros.</p>
+                <p>5.2. Los usuarios no tienen derecho a copiar, reproducir o distribuir el contenido del Sitio sin autorización previa por escrito.</p>
+
+                <h6>6. Responsabilidad</h6>
+                <p>6.1. [Nombre de la entidad estudiantil] no se hace responsable por el contenido proporcionado por los refugios de animales ni por las acciones de los usuarios.</p>
+                <p>6.2. Los usuarios comprenden que la adopción de animales es una decisión importante y deben investigar y evaluar adecuadamente la información proporcionada en los perfiles de los animales.</p>
+
+                <h6>7. Cambios en los Términos y Condiciones</h6>
+                <p>7.1. [Nombre de la entidad estudiantil] se reserva el derecho de modificar estos términos y condiciones en cualquier momento sin previo aviso.</p>
+
+                <h6>8. Contacto</h6>
+                <p>8.1. Para cualquier pregunta o inquietud relacionada con estos términos y condiciones, puede ponerse en contacto con nosotros a través de [correo electrónico de contacto].</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Aquí termina el modal -->
+
+
+
 								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Register
+									<button type="submit" id="color-btn-log" class="btn btn-primary btn-block">
+										Registrar 
 									</button>
 								</div>
 								<div class="mt-4 text-center">

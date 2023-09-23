@@ -13,8 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows == 0) {
-        $_SESSION['error_message'] = "El usuario con ese correo electrónico no existe.";
-        header("location: index.html");
+        echo json_encode(["error" => "userDoesNotExist"]);
         exit();
     } else {
         $user = $result->fetch_assoc();
@@ -22,10 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $user['email'];
             $_SESSION['name'] = $user['name'];
             $_SESSION['logged_in'] = true;
-            header("location: primerapag.html");
+            echo json_encode(["success" => true]);
             exit();
         } else {
-            echo "Has ingresado una contraseña incorrecta, intenta nuevamente.";
+            echo json_encode(["error" => "incorrectPassword"]);
+            exit();
         }
     }
 } else {

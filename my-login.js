@@ -87,7 +87,7 @@ $(document).ready(function() {
                             $("#password").addClass("is-invalid");
                         }
                     } else {
-                        window.location.href = "primerapag.html";
+                        window.location.href = "homepage.html";
                     }
                 },
                 error: function() {

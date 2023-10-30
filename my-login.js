@@ -144,18 +144,20 @@ $(document).ready(function() {
                             $("#email").siblings(".invalid-feedback").text("Este correo electrónico ya está registrado.");
                             $("#email").addClass("is-invalid");
                         } else if (response.error === "insertFailed") {
-                            // Aquí puedes mostrar un mensaje de error general si la inserción falla
+                            
                             alert("Hubo un problema al crear la cuenta. Inténtalo de nuevo más tarde.");
                         }
                     } else if (response.success) {
-                        window.location.href = "index.html"; // Redirige al inicio de sesión
+                        window.location.href = "index.html"; 
                     }
                 },
                 error: function() {
-                    // Opcional: manejo de errores de la solicitud AJAX
+                    
                     alert("Error en la solicitud. Inténtalo de nuevo más tarde.");
                 }
             });
         }
     });
+  
+
 });

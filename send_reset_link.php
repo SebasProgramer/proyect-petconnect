@@ -43,10 +43,11 @@ try {
     // Contenido
     $mail->isHTML(true); 
     $mail->Subject = 'Restablecer password';
-    $mail->Body    = 'Haga clic en el siguiente enlace para restablecer su contraseña: <a href="http://localhost/petconnect/reset.php?email=' . urlencode($email) . '&token=' . $token . '">Restablecer contraseña</a>';
+    $mail->Body    = 'Haga clic en el siguiente enlace para restablecer su contraseña: <a href="http://localhost/proyect-petconnect/reset.php?email=' . urlencode($email) . '&token=' . $token . '">Restablecer contraseña</a>';
 
     $mail->send();
-    echo 'El correo ha sido enviado';
+    header('Location: check_email.html');
+    exit();
 } catch (Exception $e) {
     echo "El correo no pudo ser enviado. Error: {$mail->ErrorInfo}";
 }

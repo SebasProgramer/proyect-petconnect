@@ -1,0 +1,62 @@
+/* Estilos para toda la barra de navegación */
+.navbar {
+    background: #888788 !important;
+    border-radius: 50px !important;
+    padding-left: 10px !important;
+}
+
+/* Estilos para el logo y el título en la barra de navegación */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.custom-logo {
+    width: 40px; /* Ajustar el tamaño del logo */
+    margin-right: 10px;
+}
+
+.custom-title {
+    font-family: 'Arial', sans-serif; /* Cambiar por la fuente deseada */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Hacer el texto en negrita */
+}
+
+
+
+/* Estilos para las tarjetas de mascotas */
+.card {
+    border: 1px solid #ccc; /* Añadir borde a las tarjetas */
+    border-radius: 15px; /* Redondear los bordes de las tarjetas */
+    margin-bottom: 100px; /* Espacio entre las tarjetas */
+}
+
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Escalar imágenes para ajustarse al contenedor */
+    border-top-left-radius: 14px; /* Redondear las esquinas superiores */
+    border-top-right-radius: 14px; /* Redondear las esquinas superiores */
+}
+
+.card-body {
+    padding: 1.25rem; /* Espaciado interno del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamaño del título */
+    font-weight: bold; /* Hacer el título en negrita */
+}
+
+.card-text {
+    margin-bottom: 5px; /* Espacio entre cada línea de texto */
+}
+.form-inline .btn-outline-success {
+    border-radius: 20px;
+    background-color: blue; /* Puedes ajustar el color azul al deseado */
+}
+.avatar {
+    width: 50px; /* Ajusta el ancho según lo necesites */
+    height: 50px; /* Ajusta el alto según lo necesites */
+    border-radius: 50%; /* Esto hace que la imagen sea circular */
+    object-fit: cover; /* Ajusta la forma en que la imagen se ajusta al tamaño del contenedor */
+}

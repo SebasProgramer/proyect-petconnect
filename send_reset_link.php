@@ -31,13 +31,13 @@ try {
     $mail->isSMTP();  
     $mail->Host = 'smtp.gmail.com';  
     $mail->SMTPAuth = true; 
-    $mail->Username = 'sebastianrequenamorales@gmail.com'; 
-    $mail->Password = 'hzxe lvtp axgj mxvu'; 
+    $mail->Username = 'contactpetconn@gmail.com'; 
+    $mail->Password = 'lprm iwjm smkb xjmc'; 
     $mail->SMTPSecure = 'tls'; 
     $mail->Port = 587; 
 
     // Destinatarios
-    $mail->setFrom('sebastianrequenamorales@gmail.com', 'Sebastian');
+    $mail->setFrom('contactpetconn@gmail.com', 'PetConnect');
     $mail->addAddress($email, ''); //en el espacio en blanco se puede colocar el nombre de la persona que recibe 
 
     // Contenido

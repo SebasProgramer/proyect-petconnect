@@ -21,6 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $user['email'];
             $_SESSION['name'] = $user['name'];
             $_SESSION['logged_in'] = true;
+
+            // Si tienes un user_id en tu tabla de usuarios, agrégalo a la sesión también
+            $_SESSION['user_id'] = $user['id'];
+
             echo json_encode(["success" => true]);
             exit();
         } else {

@@ -49,12 +49,16 @@ $(document).ready(function () {
         }
 
 
-        // Validar Imágenes del Refugio
-        var refugioImages = $("#refugio_images").val();
-        if (refugioImages === "") {
-            $("#error-refugio_images").text("Debes adjuntar fotografias de tu refugio");
+       // Validar Imágenes del Refugio
+        var refugioImages = $("#refugio_images")[0].files;
+        if (refugioImages.length === 0) {
+            $("#error-refugio_images").text("Debes adjuntar fotografías de tu refugio.");
+            isValid = false;
+        } else if (refugioImages.length !== 5) {
+            $("#error-refugio_images").text("Selecciona exactamente 5 imágenes.");
             isValid = false;
         }
+
 
         // Validar Informacion Adicional
         var refugioInformation = $("#refugio_information").val();

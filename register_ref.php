@@ -46,9 +46,17 @@ if ($stmt->execute()) {
                         . 'Teléfono del Refugio: ' . htmlspecialchars($refugio_cellphone) . '<br>'
                         . 'Información Adicional: ' . htmlspecialchars($refugio_information);
 
+        // Adjuntar las imágenes al correo electrónico
+        $targetDir = "refugio_images/";
+        foreach ($_FILES["refugio_images"]["name"] as $key => $fileName) {
+            $targetFilePath = $targetDir . basename($fileName);
+            move_uploaded_file($_FILES["refugio_images"]["tmp_name"][$key], $targetFilePath);
+            $mail->addAttachment($targetFilePath);
+        }
+
         // Enviar el correo electrónico
         $mail->send();
-        
+
         // Redireccionar a la página de éxito
         header('Location: register_ref_ok.html');
         exit();

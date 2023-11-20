@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+}
+
+body.my-login-page {
+    background-color: #f7f9fb;
+    font-size: 14px;
+}
+
+.my-login-page .brand {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+    position: relative;
+    z-index: 1;
+}
+
+.my-login-page .brand img {
+    width: 100%;
+}
+
+.my-login-page .card-wrapper {
+    width: 800px;
+}
+
+.my-login-page .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+    padding: 10px;
+}
+
+.my-login-page .card .card-title {
+    margin-bottom: 30px;
+}
+
+.my-login-page .form-control {
+    border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+    width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+    padding: 12px 10px;
+}
+
+.my-login-page .footer {
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+
+#color-btn-log{
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+#btn-color-register{
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+#forget-password-index{
+    color: blueviolet;
+}
+
+#data-eye-index{
+    color: blueviolet;
+}
+
+/* Estilo para el modal */
+.modal-body {
+    font-size: 14px;
+}
+
+/* Estilo para los títulos dentro del modal */
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para el texto del contenido del modal */
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+/* Estilo para las listas dentro del modal */
+.modal-body ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo para los enlaces dentro del modal */
+.modal-body a {
+    color: #007bff; /* Color azul por defecto de los enlaces */
+    text-decoration: underline;
+}
+
+/* Estilo para el botón "Cerrar" del modal */
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: 1px solid #999;
+}
+
+/* Estilos adicionales para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: blueviolet;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+@media screen and (max-width: 425px) {
+    .my-login-page .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .my-login-page .card.fat {
+        padding: 0;
+    }
+
+    .my-login-page .card.fat .card-body {
+        padding: 15px;
+    }
+
+    table {
+        width: 100%;
+    }
+}

@@ -22,8 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['name'] = $user['name'];
             $_SESSION['logged_in'] = true;
 
-            // Si tienes un user_id en tu tabla de usuarios, agrégalo a la sesión también
-            $_SESSION['user_id'] = $user['id'];
+
+            // Verifica si el usuario es Super Admin y almacena esa información en la sesión
+            $_SESSION['is_super_admin'] = ($user['email'] === 'superadmin@gmail.com'); // Reemplaza con el correo real
 
             echo json_encode(["success" => true]);
             exit();

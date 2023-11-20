@@ -7,6 +7,7 @@
     <title>PetConnect</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Css/estilos.css"> <!-- Enlace al archivo CSS externo -->
+    <script src="./homepage.js"></script>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -22,6 +23,7 @@
     <button class="btn btn-info mr-2">Refugios</button>
 
     <?php
+    
     if (isset($_SESSION['email']) && $_SESSION['logged_in'] === true) {
         $email = $_SESSION['email'];
 
@@ -40,7 +42,12 @@
     } else {
         echo '<a href="login.html" class="btn btn-primary">Iniciar Sesión o Registrarse</a>';
     }
+
+    if (isset($_SESSION['is_super_admin']) && $_SESSION['is_super_admin']) {
+        echo '<button onclick="window.location.href=\'admin_panel.html\'">Panel de Control</button>';
+    }
     ?>
+
 </nav>
 
     <div class="container mt-5">

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Refugio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Css/my-login.css">
+</head>
+<body class="my-login-page">
+    <div class="container h-100">
+        <div class="row justify-content-md-center align-items-center h-100">
+            <div class="card-wrapper">
+                <div class="card fat">
+                    <div class="card-body">
+                        <h4 class="card-title">Registro de Refugio</h4>
+                        <form method="POST" action="register_ref.php" class="register_ref" novalidate="" enctype="multipart/form-data">
+                            
+                            <div class="form-group">
+                                <label for="refugio_name">Nombre del Refugio</label>
+                                <input type="text" class="form-control" name="refugio_name" id="refugio_name"/>
+                                <small class="text-danger" id="error-refugio_name"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refugio_direction">Direccion del Refugio</label>
+                                <input type="text" class="form-control" name="refugio_direction" id="refugio_direction"/>
+                                <small class="text-danger" id="error-refugio_direction"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refugio_cellphone">Número Telefonico del Refugio</label>
+                                <input type="number" class="form-control" name="refugio_cellphone" id="refugio_cellphone"/>
+                                <small class="text-danger" id="error-refugio_cellphone"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refugio_images">Imágenes del Refugio</label>
+                                <input type="file" class="form-control" name="refugio_images[]" id="refugio_images" multiple accept="image/*" />
+                                <small class="text-danger" id="error-refugio_images"></small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="refugio_information">Informacion Adicional</label>
+                                <input type="text" class="form-control" name="refugio_information" id="refugio_information"/>
+                                <small class="text-danger" id="error-refugio_information"></small>
+                            </div>
+
+                            <div class="form-group m-0">
+                                <button type="button" class="btn btn-primary btn-block" id="submitBtn">
+                                    Enviar Información
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluir la versión completa de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- Incluir tu archivo JavaScript personalizado -->
+    <script src="./register_ref.js"></script>
+</body>
+</html>

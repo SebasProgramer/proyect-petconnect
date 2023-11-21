@@ -37,7 +37,7 @@
             $profileImage = $user['profile_image'];
             echo '<a href="profile.php"><img src="profile_images/' . $profileImage . '" alt="Profile Image" class="avatar"></a>';
         } else {
-            echo '<a href="create_profile.php"><img src="Toji Fushiguro.jpeg" alt="Default Avatar" class="avatar"></a>';
+            echo '<a href="profile.php"><img src="Toji Fushiguro.jpeg" alt="Default Avatar" class="avatar"></a>';
         }
     } else {
         echo '<a href="login.html" class="btn btn-primary">Iniciar Sesión o Registrarse</a>';

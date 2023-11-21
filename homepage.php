@@ -7,7 +7,7 @@
     <title>PetConnect</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Css/estilos.css"> <!-- Enlace al archivo CSS externo -->
-    <script src="./homepage.js"></script>
+    
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -40,7 +40,7 @@
             echo '<a href="create_profile.php"><img src="Toji Fushiguro.jpeg" alt="Default Avatar" class="avatar"></a>';
         }
     } else {
-        echo '<a href="index.html" class="btn btn-primary">Iniciar Sesión o Registrarse</a>';
+        echo '<a href="login.html" class="btn btn-primary">Iniciar Sesión o Registrarse</a>';
     }
 
     if (isset($_SESSION['is_super_admin']) && $_SESSION['is_super_admin']) {

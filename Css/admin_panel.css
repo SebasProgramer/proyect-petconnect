@@ -7,6 +7,8 @@ body.my-login-page {
     font-size: 14px;
 }
 
+
+
 .my-login-page .brand {
     width: 90px;
     height: 90px;
@@ -134,6 +136,15 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
     color: #000;
 }
+
+input[type="checkbox"] {
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 
 @media screen and (max-width: 425px) {
     .my-login-page .card-wrapper {

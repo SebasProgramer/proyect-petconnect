@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Kodinger">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>PetConnect - Panel de Administración</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./Css/admin_panel.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Kodinger">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PetConnect - Panel de Administración</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Css/admin_panel.css">
+   
 </head>
 <body class="my-login-page">
-	<section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center align-items-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<img src="petconnect.jpeg" alt="logo">
-					</div>
-					<div class="card fat">
-						<div class="card-body">
-							<center><h4 class="card-title">Bienvenido al Panel de Administración, Super Admin</h4></center>
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center align-items-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="petconnect.jpeg" alt="logo">
+                    </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <center><h4 class="card-title">Bienvenido al Panel de Administración, Super Admin</h4></center>
 
-                            <!-- Aquí puedes agregar la interfaz de administración -->
-                            <center>
+                    
                                 <table id="usersTable">
                                     <tr>
                                         <th>ID</th>
                                         <th>Email</th> 
                                         <th>Nombre</th>
+                                        <th id="Apto">Apto</th>
                                     </tr>
-                                    <!-- Las filas de la tabla serán añadidas por JavaScript -->
+                                    
                                 </table>
-                            </center>
+                            
 
-							<script>
-                                // Solicita los datos de los usuarios al backend
+                            <script>
+                                // Se solicita los datos de los usuarios al backend admin_panel.php
                                 fetch('admin_panel.php')
                                     .then(response => response.json())
                                     .then(users => {
-                                        // Añade una fila a la tabla por cada usuario
+                                        // Añade una fila a la tabla por cada usuario agregado en la base de datos
                                         const table = document.getElementById('usersTable');
                                         users.forEach(user => {
                                             const row = table.insertRow(-1);
                                             row.insertCell(0).textContent = user.id;
                                             row.insertCell(1).textContent = user.email;
                                             row.insertCell(2).textContent = user.name;
+
+                                            // checkbox en la columna "Apto"
+                                            const checkboxCell = row.insertCell(3);
+                                            const checkbox = document.createElement('input');
+                                            checkbox.type = 'checkbox';
+                                            checkboxCell.appendChild(checkbox);
                                         });
                                     });
                             </script>
                         
-						</div>
-					</div>
-					<div class="footer">
-						Copyright &copy; 2023 &mdash; PetConnect
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        Copyright &copy; 2023 &mdash; PetConnect
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
